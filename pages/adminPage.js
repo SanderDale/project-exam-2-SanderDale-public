@@ -2,14 +2,12 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
-import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSignOutAlt, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import AuthContext from "../context/AuthContext";
 import useAxios from "../hooks/useAxios";
 import AdminEnquiries from "../components/admin/AdminEnquiries";
 import AdminMessages from "../components/admin/AdminMessages";
-import { BASE_URL } from "./../constants/api";
 
 export default function AdminPage() {
 	const router = useRouter();
@@ -33,10 +31,8 @@ export default function AdminPage() {
 		async function getData() {
 			try {
 				const enquiriesResponse = await http.get("/enquiries");
-				console.log("response", enquiriesResponse);
 				setEnquiries(enquiriesResponse.data);
 				const messagesResponse = await http.get("/messages");
-				console.log("response", messagesResponse);
 				setMessages(messagesResponse.data);
 			} catch (error) {
 				console.log(error);

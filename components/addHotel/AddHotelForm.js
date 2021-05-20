@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
-import { useState } from "react";
-import axios from "axios";
+import { useContext, useEffect, useState } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { BASE_URL } from "./../../constants/api";
+import AuthContext from "../../context/AuthContext";
+import useAxios from "../../hooks/useAxios";
 
 const schema = yup.object().shape({
 	name: yup.string().required("Please enter hotel name").min(5, "Please enter the full hotel name"),
@@ -17,6 +17,7 @@ const schema = yup.object().shape({
 });
 
 function AddHotelForm() {
+	const [auth, setAuth] = useContext(AuthContext);
 	const [submitting, setSubmitting] = useState(false);
 	const [serverError, setServerError] = useState(null);
 	const [submitSuccess, setSubmitSuccess] = useState(null);
@@ -26,26 +27,26 @@ function AddHotelForm() {
 		resolver: yupResolver(schema),
 	});
 
-	function handleChange(event) {
-		console.log(event.target.files);
+	const http = useAxios();
 
+	const handleChange = (event) => {
+		console.log(event.target.files);
 		setFile(event.target.files[0]);
-	}
+	};
 
 	async function onSubmit(data) {
-		setSubmitting(true);
-		setServerError(null);
-		console.log(data);
+		const formData = new FormData();
+		formData.append(
+			"data",
+			JSON.stringify({ name: data.name, price: data.price, rating: data.rating, description: data.description })
+		);
+		formData.append("files.image", file);
 
 		try {
-			const response = await axios.post(BASE_URL + "/hotels/", data);
-			console.log("response", response.data);
-			setSubmitSuccess("Hotel Added!");
+			const response = await http.post("/hotels/", formData);
+			console.log("data", response);
 		} catch (error) {
-			console.log("error", error);
-			setServerError(error.toString());
-		} finally {
-			setSubmitting(false);
+			console.log(error);
 		}
 	}
 
@@ -59,8 +60,11 @@ function AddHotelForm() {
 				{errors.price && <span>{errors.price.message}</span>}
 				<input type="text" name="rating" placeholder="Rating" ref={register} />
 				{errors.rating && <span>{errors.rating.message}</span>}
-				<input type="file" onChange={handleChange} name="image" placeholder="Image" ref={register} />
-				{errors.image && <span>{errors.image.message}</span>}
+				<div className="flex flex-col">
+					<label>Image</label>
+					<input onChange={handleChange} type="file" name="image" placeholder="Image" ref={register} />
+					{errors.image && <span>{errors.image.message}</span>}
+				</div>
 				<textarea type="text" name="description" placeholder="Description" ref={register} />
 				{errors.description && <span>{errors.description.message}</span>}
 				<button>{submitting ? "Adding hotel..." : "Add Hotel"}</button>

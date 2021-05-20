@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faEnvelopeOpen } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope, faEnvelopeOpen } from "@fortawesome/free-regular-svg-icons";
 
 function AdminMessages({ messages }) {
 	const [selected, setSelected] = useState(null);

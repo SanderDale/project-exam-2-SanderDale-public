@@ -5,8 +5,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faUnlock } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faUnlock } from "@fortawesome/free-solid-svg-icons";
 import AuthContext from "./../../context/AuthContext";
 import { BASE_URL } from "./../../constants/api";
 

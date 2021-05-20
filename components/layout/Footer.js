@@ -2,9 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
-import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTwitterSquare, faFacebookSquare, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import AuthContext from "../../context/AuthContext";
 
@@ -73,7 +71,7 @@ function Footer() {
 						<Link href="/adminPage">
 							<a className="flex justify-center items-center">
 								<FontAwesomeIcon className="w-6 h-6 pr-2" icon={faUser} />
-								Admin
+								Admin Page
 							</a>
 						</Link>
 					</div>

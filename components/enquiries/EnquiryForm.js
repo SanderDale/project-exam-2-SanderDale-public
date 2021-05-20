@@ -49,13 +49,11 @@ function EnquiryForm({ hotelName }) {
 			{submitSuccess ? (
 				""
 			) : (
-				<form
-					onSubmit={handleSubmit(onSubmit)}
-					className="flex flex-col justify-center items-center gap-3 font-paragraph">
+				<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center items-center font-paragraph">
 					{serverError && <span>{serverError}</span>}
 					<input className="hidden" name="hotel" defaultValue={hotelName} ref={register} />
 					<input
-						className="w-64 focus:border-black focus:ring-black md:max-w-lg md:w-full"
+						className="w-64 focus:border-black focus:ring-black md:max-w-lg md:w-full mb-4"
 						type="text"
 						name="name"
 						placeholder="Full name *"
@@ -63,18 +61,18 @@ function EnquiryForm({ hotelName }) {
 					/>
 					{errors.name && <span>{errors.name.message}</span>}
 					<input
-						className="w-64 focus:border-black focus:ring-black md:max-w-lg md:w-full"
+						className="w-64 focus:border-black focus:ring-black md:max-w-lg md:w-full mb-4"
 						type="email"
 						name="email"
 						placeholder="Email *"
 						ref={register}
 					/>
 					{errors.email && <span>{errors.email.message}</span>}
-					<div className="flex flex-col md:flex-row justify-center items-start md:gap-4">
+					<div className="flex flex-col md:flex-row justify-center items-start">
 						<div className="flex flex-col justify-center items-start">
 							<label className="font-heading">From *</label>
 							<input
-								className="w-64 mb-2 focus:border-black focus:ring-black md:w-56"
+								className="w-64 mb-4 md:mr-4 focus:border-black focus:ring-black md:w-56"
 								type="date"
 								name="from"
 								ref={register}
@@ -84,7 +82,7 @@ function EnquiryForm({ hotelName }) {
 						<div className="flex flex-col justify-center items-start">
 							<label className="font-heading">To *</label>
 							<input
-								className="w-64  mb-2 focus:border-black focus:ring-black md:w-56"
+								className="w-64  mb-4 focus:border-black focus:ring-black md:w-56"
 								type="date"
 								name="to"
 								ref={register}

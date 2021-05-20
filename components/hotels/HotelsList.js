@@ -30,14 +30,14 @@ function HotelsList({ hotelName, hotelImage, hotelDescription, hotelRating, hote
 				<h1 className="text-lg sm:text-4xl font-semibold">{hotelName}</h1>
 				<p className="hidden sm:block pt-5 mb-4 pr-2">{hotelDescription}</p>
 			</div>
-			<div className="col-span-2 sm:col-span-1 sm:row-span-2 ml-2 flex flex-col gap-3 md:gap-0">
+			<div className="col-span-2 sm:col-span-1 sm:row-span-2 ml-2 flex flex-col">
 				<p className="h-1/3 text-sm sm:text-2xl flex justify-end items-center">
 					Rating
 					<span className="bg-blue-500 text-white px-2 py-1 ml-2 rounded font-paragraph text-xs sm:text-lg">
 						{hotelRating}
 					</span>
 				</p>
-				<p className="h-1/3 text-sm sm:text-lg font-paragraph flex justify-end items-end sm:mb-5 lg:mb-0">
+				<p className="h-1/3 text-sm sm:text-lg font-paragraph flex justify-end items-end sm:mb-5 lg:mb-0 my-1">
 					NOK {hotelPrice}
 				</p>
 				<div className="flex items-center sm:items-start lg:items-center justify-center sm:justify-end text-white text-sm sm:text-lg h-1/3">

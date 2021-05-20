@@ -15,8 +15,8 @@ function ContactInfo() {
 					Norway
 				</p>
 			</div>
-			<div className="flex flex-col justify-center items-center gap-4 md:gap-5 md:row-span-2 md:col-span-2 md:col-start-2 md:col-end-4">
-				<p className="flex">
+			<div className="flex flex-col justify-center items-center md:row-span-2 md:col-span-2 md:col-start-2 md:col-end-4">
+				<p className="flex mb-4">
 					<FontAwesomeIcon className="w-6 h-6 mr-2" icon={faPhoneAlt} />
 					+47 123 45 678
 				</p>

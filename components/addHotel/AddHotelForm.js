@@ -52,20 +52,20 @@ function AddHotelForm() {
 
 	return (
 		<div className="w-full">
-			<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
+			<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col">
 				{serverError && <span>{serverError}</span>}
-				<input type="text" name="name" placeholder="Hotel name" ref={register} />
+				<input className="mb-5" type="text" name="name" placeholder="Hotel name" ref={register} />
 				{errors.name && <span>{errors.name.message}</span>}
-				<input type="text" name="price" placeholder="Price" ref={register} />
+				<input className="mb-5" type="text" name="price" placeholder="Price" ref={register} />
 				{errors.price && <span>{errors.price.message}</span>}
-				<input type="text" name="rating" placeholder="Rating" ref={register} />
+				<input className="mb-5" type="text" name="rating" placeholder="Rating" ref={register} />
 				{errors.rating && <span>{errors.rating.message}</span>}
 				<div className="flex flex-col">
 					<label>Image</label>
-					<input onChange={handleChange} type="file" name="image" placeholder="Image" ref={register} />
+					<input className="mb-5" onChange={handleChange} type="file" name="image" placeholder="Image" ref={register} />
 					{errors.image && <span>{errors.image.message}</span>}
 				</div>
-				<textarea type="text" name="description" placeholder="Description" ref={register} />
+				<textarea className="mb-5" type="text" name="description" placeholder="Description" ref={register} />
 				{errors.description && <span>{errors.description.message}</span>}
 				<button>{submitting ? "Adding hotel..." : "Add Hotel"}</button>
 			</form>

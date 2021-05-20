@@ -49,7 +49,7 @@ function LoginForm() {
 			{loginError && (
 				<span className="text-center p-1 mb-5 w-full bg-red-400 border-red-600 border-2">{loginError}</span>
 			)}
-			<fieldset className="flex justify-center items-center flex-col gap-5 md:gap-2 w-full" disabled={submitting}>
+			<fieldset className="flex justify-center items-center flex-col w-full" disabled={submitting}>
 				<div className="relative flex w-full flex-wrap items-stretch mb-3">
 					<input
 						className="bg-transparent placeholder-white border-white border-2 w-full mb-2 relative"

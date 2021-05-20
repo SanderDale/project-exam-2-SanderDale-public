@@ -8,7 +8,7 @@ export default function AdminLogin() {
 				<title>Holidaze | Admin Login</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className="flex justify-center md:justify-start items-center flex-col w-full bg-login-banner-small md:bg-login-banner-large bg-cover bg-center text-white md:h-96 lg:min-h-96 md:gap-5 md:rounded-l-2xl md:shadow-lg md:pt-16">
+			<div className="flex justify-center md:justify-start items-center flex-col w-full bg-login-banner-small md:bg-login-banner-large bg-cover bg-center text-white md:h-96 lg:min-h-96 md:rounded-l-2xl md:shadow-lg md:pt-16">
 				<h1 className="font-heading text-4xl xl:text-5xl py-7">Admin Login</h1>
 				<p className="px-10 font-paragraph hidden md:block xl:text-xl w-96">
 					In the admin panel you can check orders and messages as well as add hotels to your page.

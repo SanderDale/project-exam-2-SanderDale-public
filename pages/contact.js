@@ -18,14 +18,14 @@ export default function Contact() {
 					Feel free to contact us with any questions you might have about our hotels or your visit to Bergen!
 				</p>
 			</div>
-			<div className="flex justify-center xl:items-start items-center flex-col xl:grid xl:grid-cols-2 xl:grid-rows-3 w-4/5 xl:w-1/2 xl:gap-5">
-				<div className="flex justify-center items-center flex-col w-full md:order-2 xl:row-span-2">
+			<div className="flex justify-center xl:items-start items-center flex-col xl:grid xl:grid-cols-2 xl:grid-rows-3 w-4/5 xl:w-1/2">
+				<div className="flex justify-center items-center flex-col w-full md:order-2 xl:row-span-2 xl:mt-5">
 					<ContactForm />
 				</div>
 				<div className="flex justify-center items-center flex-col mb-5 xl:mb-0 pb-5 xl:pb-0 border-gray-500 border-b-2 xl:border-0 w-full md:order-1 xl:col-start-1 xl:col-end-3 xl:row-span-1">
 					<ContactInfo />
 				</div>
-				<div className="flex justify-center items-center flex-col mb-5 w-full md:order-3 xl:row-span-2">
+				<div className="flex justify-center items-center flex-col mb-5 w-full md:order-3 xl:row-span-2 xl:mt-5 xl:pl-5">
 					<Image src="/images/google-maps-placeholder.png" width={1000} height={1000} />
 				</div>
 			</div>

@@ -51,10 +51,10 @@ function ContactForm() {
 			) : (
 				<form
 					onSubmit={handleSubmit(onSubmit)}
-					className="flex flex-col justify-center items-center gap-3 md:gap-5 font-paragraph my-5 xl:my-0 pb-5 border-gray-500 border-b-2 w-full md:items-end xl:border-0">
+					className="flex flex-col justify-center items-center font-paragraph my-5 xl:my-0 pb-5 border-gray-500 border-b-2 w-full md:items-end xl:border-0">
 					{serverError && <span>{serverError}</span>}
 					<input
-						className="border-2 focus:border-black focus:ring-black w-full md:text-xl md:h-14"
+						className="border-2 focus:border-black focus:ring-black w-full md:text-xl md:h-14 mb-5"
 						type="text"
 						name="name"
 						placeholder="Full name *"
@@ -62,7 +62,7 @@ function ContactForm() {
 					/>
 					{errors.name && <span>{errors.name.message}</span>}
 					<input
-						className="border-2 focus:border-black focus:ring-black w-full md:text-xl md:h-14"
+						className="border-2 focus:border-black focus:ring-black w-full md:text-xl md:h-14 mb-5"
 						type="email"
 						name="email"
 						placeholder="Email *"
@@ -70,7 +70,7 @@ function ContactForm() {
 					/>
 					{errors.email && <span>{errors.email.message}</span>}
 					<textarea
-						className="border-2 focus:border-black focus:ring-black w-full h-24 md:h-44 md:text-xl"
+						className="border-2 focus:border-black focus:ring-black w-full h-24 md:h-44 md:text-xl mb-5"
 						type="text"
 						name="message"
 						placeholder="Message... *"

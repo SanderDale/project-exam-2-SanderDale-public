@@ -12,6 +12,7 @@ export default function Hotels({ hotels }) {
 			<Head>
 				<title>Holidaze | Hotels</title>
 				<link rel="icon" href="/favicon.ico" />
+				<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 			</Head>
 
 			<h1 className="text-5xl sm:text-7xl text-center my-8 sm:my-10 lg:my-16 xl:my-20 font-semibold">Hotels</h1>
@@ -21,7 +22,7 @@ export default function Hotels({ hotels }) {
 						<Searchbar hotelNames={hotelNames} />
 					</div>
 				</div>
-				<div className="flex flex-col items-center xl:col-span-3 w-11/12 mb-10">
+				<div className="flex flex-col items-center col-span-1 xl:col-span-3 w-11/12 mb-10">
 					{hotels.map((hotel) => {
 						return (
 							<HotelsList

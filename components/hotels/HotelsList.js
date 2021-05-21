@@ -26,7 +26,7 @@ function HotelsList({ hotelName, hotelImage, hotelDescription, hotelRating, hote
 					/>
 				</div>
 			</div>
-			<div className="col-span-2 sm:col-span-2 sm:row-span-2 ml-2 sm:ml-5 h-full">
+			<div className="col-span-2 sm:col-span-2 sm:row-span-2 ml-2 sm:ml-5">
 				<h1 className="text-lg sm:text-4xl font-semibold">{hotelName}</h1>
 				<p className="hidden sm:block pt-5 mb-4 pr-2">{hotelDescription}</p>
 			</div>

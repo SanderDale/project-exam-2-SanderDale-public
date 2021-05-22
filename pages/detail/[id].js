@@ -36,6 +36,7 @@ export default function Details({ hotel }) {
 			<Head>
 				<title>Holidaze | Details</title>
 				<link rel="icon" href="/favicon.ico" />
+				<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 			</Head>
 			<Breadcrumbs hotelName={hotel.name} />
 			<HotelDetails
@@ -45,8 +46,6 @@ export default function Details({ hotel }) {
 				hotelRating={hotel.rating}
 				hotelPrice={hotel.price}
 			/>
-			<div className="w-10/12 sm:w-8/12 lg:w-9/12 xl:w-7/12 h-1 border-b-2 mx-auto px-5"></div>
-			<div>google maps</div>
 		</div>
 	);
 }

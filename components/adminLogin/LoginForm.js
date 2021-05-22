@@ -36,8 +36,6 @@ function LoginForm() {
 		} catch (error) {
 			console.log("error", error);
 			setLoginError("Wrong username or password");
-		} finally {
-			setSubmitting(false);
 		}
 	}
 

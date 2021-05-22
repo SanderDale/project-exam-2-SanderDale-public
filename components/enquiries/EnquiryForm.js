@@ -36,8 +36,6 @@ function EnquiryForm({ hotelName }) {
 		} catch (error) {
 			console.log("error", error);
 			setServerError(error.toString());
-		} finally {
-			setSubmitting(false);
 		}
 	}
 
@@ -50,7 +48,7 @@ function EnquiryForm({ hotelName }) {
 				""
 			) : (
 				<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-center items-center font-paragraph">
-					{serverError && <span>{serverError}</span>}
+					{serverError && <span className="bg-red-400 border-red-600 border-2">{serverError}</span>}
 					<input className="hidden" name="hotel" defaultValue={hotelName} ref={register} />
 					<input
 						className="w-64 focus:border-black focus:ring-black md:max-w-lg md:w-full mb-4"
@@ -59,7 +57,11 @@ function EnquiryForm({ hotelName }) {
 						placeholder="Full name *"
 						ref={register}
 					/>
-					{errors.name && <span>{errors.name.message}</span>}
+					{errors.name && (
+						<span className="text-center p-1 mb-5 w-full bg-yellow-400 border-yellow-600 border-2">
+							{errors.name.message}
+						</span>
+					)}
 					<input
 						className="w-64 focus:border-black focus:ring-black md:max-w-lg md:w-full mb-4"
 						type="email"
@@ -67,7 +69,11 @@ function EnquiryForm({ hotelName }) {
 						placeholder="Email *"
 						ref={register}
 					/>
-					{errors.email && <span>{errors.email.message}</span>}
+					{errors.email && (
+						<span className="text-center p-1 mb-5 w-full bg-yellow-400 border-yellow-600 border-2">
+							{errors.email.message}
+						</span>
+					)}
 					<div className="flex flex-col md:flex-row justify-center items-start">
 						<div className="flex flex-col justify-center items-start">
 							<label className="font-heading">From *</label>
@@ -77,7 +83,9 @@ function EnquiryForm({ hotelName }) {
 								name="from"
 								ref={register}
 							/>
-							{errors.from && <span className="w-64 md:w-56">{errors.from.message}</span>}
+							{errors.from && (
+								<span className="w-64 md:w-56 bg-yellow-400 border-yellow-600 border-2">{errors.from.message}</span>
+							)}
 						</div>
 						<div className="flex flex-col justify-center items-start">
 							<label className="font-heading">To *</label>
@@ -87,7 +95,11 @@ function EnquiryForm({ hotelName }) {
 								name="to"
 								ref={register}
 							/>
-							{errors.to && <span className="w-64 md:w-56">{errors.to.message}</span>}
+							{errors.to && (
+								<span className="w-64 md:w-56 text-center bg-yellow-400 border-yellow-600 border-2 mb-5">
+									{errors.to.message}
+								</span>
+							)}
 						</div>
 					</div>
 					<button className="w-64 h-12 text-white hover:text-green-700 text-xl bg-green-700 hover:bg-transparent border-green-700 border-2 tracking-widest transition ease-out duration-300">

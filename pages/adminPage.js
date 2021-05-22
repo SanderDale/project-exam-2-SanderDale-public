@@ -47,6 +47,7 @@ export default function AdminPage() {
 			<Head>
 				<title>Holidaze | Admin Page</title>
 				<link rel="icon" href="/favicon.ico" />
+				<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 			</Head>
 			<div className="w-11/12 md:w-10/12">
 				<h1 className="text-4xl md:text-6xl flex justify-center xl:justify-start items-center font-heading uppercase font-semibold my-7 md:my-12 w-full">

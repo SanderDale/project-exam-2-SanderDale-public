@@ -9,6 +9,7 @@ export default function Contact() {
 			<Head>
 				<title>Holidaze | Contact</title>
 				<link rel="icon" href="/favicon.ico" />
+				<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 			</Head>
 			<div className="flex justify-center items-center md:items-start flex-col md:w-4/5 xl:w-1/2">
 				<h1 className="uppercase my-5 md:mt-16 text-3xl md:text-6xl font-heading font-semibold tracking-wide">

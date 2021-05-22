@@ -32,8 +32,6 @@ function ContactForm() {
 		} catch (error) {
 			console.log("error", error);
 			setServerError(error.toString());
-		} finally {
-			setSubmitting(false);
 		}
 	}
 
@@ -51,35 +49,52 @@ function ContactForm() {
 			) : (
 				<form
 					onSubmit={handleSubmit(onSubmit)}
+					disabled={submitting}
 					className="flex flex-col justify-center items-center font-paragraph my-5 xl:my-0 pb-5 border-gray-500 border-b-2 w-full md:items-end xl:border-0">
-					{serverError && <span>{serverError}</span>}
-					<input
-						className="border-2 focus:border-black focus:ring-black w-full md:text-xl md:h-14 mb-5"
-						type="text"
-						name="name"
-						placeholder="Full name *"
-						ref={register}
-					/>
-					{errors.name && <span>{errors.name.message}</span>}
-					<input
-						className="border-2 focus:border-black focus:ring-black w-full md:text-xl md:h-14 mb-5"
-						type="email"
-						name="email"
-						placeholder="Email *"
-						ref={register}
-					/>
-					{errors.email && <span>{errors.email.message}</span>}
-					<textarea
-						className="border-2 focus:border-black focus:ring-black w-full h-24 md:h-44 md:text-xl mb-5"
-						type="text"
-						name="message"
-						placeholder="Message... *"
-						ref={register}
-					/>
-					{errors.message && <span>{errors.message.message}</span>}
-					<button className="w-full md:w-48 h-12 md:h-14 font-heading  text-white hover:text-blue-500 text-xl md:text-2xl bg-blue-500 hover:bg-transparent border-blue-500 border-2 tracking-widest transition ease-out duration-300">
-						{submitting ? "Sending..." : "SEND"}
-					</button>
+					{serverError && (
+						<span className="text-center p-1 mb-5 w-full bg-red-400 border-red-600 border-2">{serverError}</span>
+					)}
+					<fieldset className="flex flex-col w-full" disabled={submitting}>
+						<input
+							className="border-2 focus:border-black focus:ring-black w-full md:text-xl md:h-14 mb-5"
+							type="text"
+							name="name"
+							placeholder="Full name *"
+							ref={register}
+						/>
+						{errors.name && (
+							<span className="text-center p-1 mb-5 w-full bg-yellow-400 border-yellow-600 border-2">
+								{errors.name.message}
+							</span>
+						)}
+						<input
+							className="border-2 focus:border-black focus:ring-black w-full md:text-xl md:h-14 mb-5"
+							type="email"
+							name="email"
+							placeholder="Email *"
+							ref={register}
+						/>
+						{errors.email && (
+							<span className="text-center p-1 mb-5 w-full bg-yellow-400 border-yellow-600 border-2">
+								{errors.email.message}
+							</span>
+						)}
+						<textarea
+							className="border-2 focus:border-black focus:ring-black w-full h-24 md:h-44 md:text-xl mb-5"
+							type="text"
+							name="message"
+							placeholder="Message... *"
+							ref={register}
+						/>
+						{errors.message && (
+							<span className="text-center p-1 mb-5 w-full bg-yellow-400 border-yellow-600 border-2">
+								{errors.message.message}
+							</span>
+						)}
+						<button className="w-full md:w-48 h-12 md:h-14 font-heading  text-white hover:text-blue-500 text-xl md:text-2xl bg-blue-500 hover:bg-transparent border-blue-500 border-2 tracking-widest transition ease-out duration-300">
+							{submitting ? "Sending..." : "SEND"}
+						</button>
+					</fieldset>
 				</form>
 			)}
 		</>

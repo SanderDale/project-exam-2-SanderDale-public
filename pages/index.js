@@ -11,6 +11,7 @@ export default function Home({ hotels }) {
 			<Head>
 				<title>Holidaze | Home</title>
 				<link rel="icon" href="/favicon.ico" />
+				<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 			</Head>
 
 			<div className="h-bannerHeight lg:bg-home-banner-big md:bg-home-banner-medium bg-home-banner-small bg-center bg-cover flex justify-center items-center text-white flex-col">
@@ -19,7 +20,7 @@ export default function Home({ hotels }) {
 						Find the best hotel for your next stay in Bergen
 					</h1>
 				</div>
-				<div className="h-full px-5 flex items-start justify-center w-full lg:w-1/3">
+				<div className="h-full px-5 flex items-start justify-center w-full xl:w-1/3">
 					<Searchbar hotelNames={hotelNames} />
 				</div>
 			</div>

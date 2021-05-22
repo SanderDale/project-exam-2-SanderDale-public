@@ -42,7 +42,9 @@ function HotelsList({ hotelName, hotelImage, hotelDescription, hotelRating, hote
 				</p>
 				<div className="flex items-center sm:items-start lg:items-center justify-center sm:justify-end text-white text-sm sm:text-lg h-1/3">
 					<Link href={"/detail/" + hotelId}>
-						<a className="h-7 sm:h-9 w-full sm:w-44 flex items-center justify-center rounded bg-blue-500">Details</a>
+						<a className="h-7 sm:h-9 w-full sm:w-44 flex items-center justify-center bg-blue-500 hover:text-blue-500 hover:bg-transparent border-blue-500 border-2 transition ease-out duration-300">
+							Details
+						</a>
 					</Link>
 				</div>
 			</div>

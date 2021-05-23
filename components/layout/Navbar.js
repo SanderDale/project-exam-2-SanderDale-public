@@ -12,7 +12,7 @@ function Navigation() {
 	};
 
 	return (
-		<nav className="bg-gray-800 text-white shadow-lg relative">
+		<nav className="bg-backgroundMain text-white shadow-lg relative">
 			<div className="flex justify-between items-center h-20 md:h-28 px-6 sm:px-16">
 				<div className="text-3xl md:text-6xl font-headingAlt">
 					<Link href="/">Holidaze</Link>
@@ -73,11 +73,13 @@ function Navigation() {
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
 					</svg>
 				</button>
-				<ul className="xl:hidden flex absolute top-0 right-0 h-screen lg:w-1/4 md:w-1/2 w-full bg-gray-800 flex-col justify-center items-center z-10">
+				<ul className="xl:hidden flex absolute top-0 right-0 h-screen lg:w-1/4 md:w-1/2 w-full bg-backgroundMain flex-col justify-center items-center z-10">
 					<li className="pb-10 text-2xl font-heading">
 						<div
 							className={
-								router.pathname == "/" ? "text-white" : "text-gray-300 transition ease-out duration-500 hover:text-white"
+								router.pathname == "/"
+									? "text-white"
+									: "text-gray-300 transition ease-out duration-500 hover:text-white"
 							}
 							onClick={handleClick}>
 							<Link href="/">Home</Link>

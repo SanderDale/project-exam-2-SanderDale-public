@@ -54,7 +54,7 @@ export default function AdminPage() {
 					Admin Page
 				</h1>
 				<div className="flex w-full justify-center lg:justify-end items-center mb-7 font-heading text-xl lg:text-2xl">
-					<div className="flex justify-center items-center hover:text-green-600 transition ease-out duration-500 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100">
+					<div className="flex justify-center items-center hover:text-greenColor transition ease-out duration-500 border-b-2 border-greenColor border-opacity-0 hover:border-opacity-100">
 						<Link href="/newHotel">Add New Hotel</Link>
 						<FontAwesomeIcon className="w-6 h-6 ml-2" icon={faPlusCircle} />
 					</div>

@@ -18,6 +18,10 @@ module.exports = {
 				"login-banner-small": "url('/images/login-banner-small.jpg')",
 				"login-banner-large": "url('/images/login-banner-large.jpg')",
 			}),
+			colors: {
+				backgroundMain: "#242526",
+				greenColor: "#00C267",
+			},
 		},
 	},
 	variants: {

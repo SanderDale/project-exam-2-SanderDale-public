@@ -15,7 +15,7 @@ export default function AdminLogin() {
 					In the admin panel you can check orders and messages as well as add hotels to your page.
 				</p>
 			</div>
-			<div className="flex justify-center items-start md:items-center py-16 pb-24 bg-gray-800 w-full text-white md:h-96 lg:min-h-96 md:rounded-r-2xl md:shadow-lg">
+			<div className="flex justify-center items-start md:items-center py-16 pb-24 bg-backgroundMain w-full text-white md:h-96 lg:min-h-96 md:rounded-r-2xl md:shadow-lg">
 				<LoginForm />
 			</div>
 		</div>

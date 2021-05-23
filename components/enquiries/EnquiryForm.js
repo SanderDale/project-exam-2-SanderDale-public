@@ -102,7 +102,7 @@ function EnquiryForm({ hotelName }) {
 							)}
 						</div>
 					</div>
-					<button className="w-64 h-12 text-white hover:text-green-700 text-xl bg-green-700 hover:bg-transparent border-green-700 border-2 tracking-widest transition ease-out duration-300">
+					<button className="w-64 h-12 text-white hover:text-greenColor text-xl bg-greenColor hover:bg-transparent border-greenColor border-2 tracking-widest transition ease-out duration-300">
 						{submitting ? "Booking..." : "SUBMIT"}
 					</button>
 				</form>

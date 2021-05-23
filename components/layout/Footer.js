@@ -12,9 +12,9 @@ function Footer() {
 	const [auth, setAuth] = useContext(AuthContext);
 
 	return (
-		<footer className="bg-gray-800 flex flex-col md:flex-row justify-center items-center p-7 font-heading text-2xl">
+		<footer className="bg-backgroundMain flex flex-col md:flex-row justify-center items-center p-7 font-heading text-2xl">
 			<div className="md:w-full flex justify-center items-center pb-5 md:pb-0">
-				<ul className="flex bg-gray-800 flex-col lg:flex-row text-center">
+				<ul className="flex bg-backgroundMain flex-col lg:flex-row text-center">
 					<li className="pb-5 lg:pb-0 lg:mr-7 xl:mr-20">
 						<div
 							className={
